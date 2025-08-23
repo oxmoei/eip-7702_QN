@@ -20,38 +20,39 @@
 - **配置管理**: 灵活的配置文件系统
 - **模块化设计**: 清晰的代码结构
 
-## 📁 项目结构   ➡️[PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)
+## 📁 项目结构          ➡️[详情](./PROJECT_STRUCTURE.md)
 
 ```
 eip-7702_QN/
-├── src/                            # 主要脚本目录
-│   ├── delegate.js                 # EIP-7702授权委托
-│   ├── main.js                     # 标准批量交易脚本
-│   ├── sponsored.js                # 赞助批量交易脚本
-│   └── generate-config.js          # 配置生成脚本
-├── contract/                       # 智能合约目录
-│   └── BatchCallAndSponsor.sol     # EIP-7702 合约源码
-├── lib/                            # 依赖库目录
-│   └── openzeppelin-contracts/     # OpenZeppelin 合约库
-├── modules/                        # 核心模块目录
-│   └── contract.js                 # 合约 ABI 定义
-├── call_data/                      # 配置文件目录
-│   ├── config.json                 # 主要交易配置
-│   └── example.json                # 配置示例文件
-├── install.sh                      # 安装依赖和配置环境变量（Linux/MacOS/WSL）
-├── install.ps1                     # 安装依赖和配置环境变量（windows）
-├── deploy.sh                       # Foundry 部署脚本
-├── foundry.toml                    # Foundry 配置文件
-├── package.json                    # Node.js 项目配置
-├── package-lock.json               # 依赖锁定文件
-├── .env                            # 环境变量配置
-├── .gitignore                      # Git 忽略文件
-├── .gitmodules                     # Git 子模块配置
-├── deployment-info.txt             # 部署信息记录
-├── PROJECT_STRUCTURE.md            # 项目结构说明
-├── 安装git教程.md                  # 安装git教程
-├── CONTRACT_VERIFICATION_GUIDE.md  # 合约验证（开源）指南
-└── README.md                       # 项目说明文档
+├── src/                                # 主要脚本目录
+│   ├── delegate.js                     # EIP-7702授权委托
+│   ├── main.js                         # 标准批量交易脚本
+│   ├── sponsored.js                    # 赞助批量交易脚本
+│   └── generate-config.js              # 配置生成脚本
+├── contract/                           # 智能合约目录
+│   └── BatchCallAndSponsor.sol         # EIP-7702 合约源码
+├── lib/                                # 依赖库目录
+│   └── openzeppelin-contracts/         # OpenZeppelin 合约库
+├── modules/                            # 核心模块目录
+│   └── contract.js                     # 合约 ABI 定义
+├── call_data/                          # 配置文件目录
+│   ├── config.json                     # 主要交易配置
+│   └── example.json                    # 配置示例文件
+├── doc/                                # 说明/教程
+│   ├── 安装git教程.md                  # 安装git教程
+│   ├── PROJECT_STRUCTURE.md            # 项目结构说明
+│   └── CONTRACT_VERIFICATION_GUIDE.md  # 合约验证（开源）指南
+├── install.sh                          # 安装依赖和配置环境变量（Linux/MacOS/WSL）
+├── install.ps1                         # 安装依赖和配置环境变量（windows）
+├── deploy.sh                           # Foundry 部署脚本
+├── foundry.toml                        # Foundry 配置文件
+├── package.json                        # Node.js 项目配置
+├── package-lock.json                   # 依赖锁定文件
+├── .env                                # 环境变量配置
+├── .gitignore                          # Git 忽略文件
+├── .gitmodules                         # Git 子模块配置
+├── deployment-info.txt                 # 部署信息记录
+└── README.md                           # 项目说明文档
 ```
 ## 🖥️ 支持系统
 
@@ -116,21 +117,13 @@ DELEGATION_CONTRACT_ADDRESS="0x0000000000000000000000000000000000000000"
 ### 1. 部署合约
 
 ```bash
-# 授权委托已部署的合约（确保已将合约地址添加到了 .env）
-node src/delegate.js
-
 # 使用 Foundry 部署新的合约
 ./deploy.sh
+
+# 或者，授权委托给已部署的合约（确保已将合约地址添加到了 .env）
+node src/delegate.js
 ```
 如需开源合约（验证合约），请参考➡️[开源合约教程](./CONTRACT_VERIFICATION_GUIDE.md)
-
-🚀 **部署流程包括**：
-- ✅ 环境配置检查
-- ✅ 网络信息检测
-- ✅ Foundry 环境验证
-- ✅ 合约构建
-- ✅ 合约部署
-- ✅ 部署信息记录
 
 ### 2. 生成交易配置
 
@@ -141,12 +134,6 @@ node src/generate-config.js
 npm run config
 ```
 
-⚙️ **配置生成器功能**：
-- 支持多种交易类型
-- 交互式配置创建
-- 配置验证功能
-- 用户友好的界面
-
 ### 3. 执行标准批量交易
 
 ```bash
@@ -156,11 +143,6 @@ node src/main.js
 npm run main
 ```
 
-💳 **标准批量交易特性**：
-- 用户使用自己的 ETH 支付 gas 费用
-- 使用 EIP-7702 委托机制
-- 执行批量交易操作
-
 ### 4. 执行赞助批量交易
 
 ```bash
@@ -169,10 +151,6 @@ node src/sponsored.js
 # 或
 npm run sponsored
 ```
-
-🎁 **赞助批量交易特性**：
-- 第三方支付 gas 费用
-- 签名验证机制
 
 ## 📋 脚本说明
 

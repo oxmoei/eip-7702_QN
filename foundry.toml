@@ -1,0 +1,17 @@
+[profile.default]
+src = "contract"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.20"
+optimizer = true
+optimizer_runs = 200
+
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"
+]
+
+[rpc_endpoints]
+sepolia = "https://sepolia.infura.io/v3/33115389a88b4072bd35df8d6cf7890e"
+
+[etherscan]
+sepolia = { key = "" }

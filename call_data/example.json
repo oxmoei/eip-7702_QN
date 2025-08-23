@@ -1,0 +1,53 @@
+{
+  "description": "批量交易配置 - 自动生成",
+  "version": "1.0.0",
+  "transactions": [
+    {
+      "id": "eth_transfer_1755941429925",
+      "type": "ETH_TRANSFER",
+      "to": "0xd328426a8e0bcdbbef89e96a91911eff68734e84",
+      "value": "0.02",
+      "data": "0x"
+    },
+    {
+      "id": "erc20_transfer_1755941616872",
+      "type": "ERC20_TRANSFER",
+      "contract": "0xA0Aa0DaAd7eDd5d10B8b9d91975f51AcBe56CAE0",
+      "to": "0xd328426a8e0bcdbbef89e96a91911eff68734e84",
+      "value": "0",
+      "rawValue": "0x8f5b8844f1c90000",
+      "decimals": 18,
+      "data": "0xa9059cbb"
+    },
+    {
+      "id": "erc20_approve_1755941659836",
+      "type": "CONTRACT_CALL",
+      "contract": "0xA0Aa0DaAd7eDd5d10B8b9d91975f51AcBe56CAE0",
+      "function": "approve",
+      "args": [
+        "0xd328426a8e0bcdbbef89e96a91911eff68734e84",
+        "1000.35"
+      ],
+      "amount": "1000.35",
+      "rawAmount": "0x363aa520eb26040000",
+      "decimals": 18,
+      "value": "0",
+      "data": "0x095ea7b3",
+      "abi": [
+        "function approve(address spender, uint256 amount) external returns (bool)"
+      ]
+    },
+    {
+      "id": "raw_call_1755941698110",
+      "type": "RAW_CALL",
+      "contract": "0xA0Aa0DaAd7eDd5d10B8b9d91975f51AcBe56CAE0",
+      "data": "0x095ea7b30000000000000000000000009d5befd138960ddf0dc4368a036bfad420e306ef000000000000000000000000000000000000000000000000d3c21bcecceda0000000",
+      "value": "0"
+    }
+  ],
+  "settings": {
+    "delay_between_calls": 500,
+    "max_retries": 3,
+    "timeout": 30000
+  }
+}

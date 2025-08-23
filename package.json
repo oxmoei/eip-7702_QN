@@ -1,0 +1,43 @@
+{
+  "name": "eip-7702-demo",
+  "version": "1.0.0",
+  "description": "EIP-7702 Account Abstraction Demo with Foundry deployment",
+  "main": "src/main.js",
+  "scripts": {
+    "main": "node src/main.js",
+    "sponsored": "node src/sponsored.js",
+    "config": "node src/generate-config.js",
+    "deploy-delegation": "node src/deploy-delegation.js",
+    "deploy": "./deploy.sh",
+    "build": "forge build",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "ethereum",
+    "eip-7702",
+    "account-abstraction",
+    "foundry",
+    "smart-contracts",
+    "batch-transactions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/eip-7702-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/eip-7702-demo/issues"
+  },
+  "homepage": "https://github.com/your-username/eip-7702-demo#readme"
+}

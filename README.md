@@ -1,4 +1,4 @@
-# EIP-7702 账户抽象演示项目
+# EIP-7702 账户委托批量交易
 
 ```
      ███████╗██╗██████╗    ███████╗███████╗ ██████╗ ██████╗
@@ -96,7 +96,7 @@ RPC_URL="https://sepolia.infura.io/v3/YOUR_API_KEY"
 FIRST_PRIVATE_KEY="0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
 SPONSOR_PRIVATE_KEY="0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
 
-# 委托合约地址（部署后会自动更新）
+# 委托合约地址（可留空。部署合约后会自动设置）
 DELEGATION_CONTRACT_ADDRESS="0x0000000000000000000000000000000000000000"
 ```
 
@@ -116,7 +116,7 @@ DELEGATION_CONTRACT_ADDRESS="0x0000000000000000000000000000000000000000"
 ### 1. 部署合约
 
 ```bash
-# 授权委托已部署的合约
+# 授权委托已部署的合约（确保已将合约地址添加到了 .env）
 node src/delegate.js
 
 # 使用 Foundry 部署新的合约

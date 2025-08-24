@@ -7,7 +7,7 @@
     "main": "node src/main.js",
     "sponsored": "node src/sponsored.js",
     "config": "node src/generate-config.js",
-    "deploy-delegation": "node src/deploy-delegation.js",
+    "delegate": "node src/delegate.js",
     "deploy": "./deploy.sh",
     "build": "forge build",
     "test": "echo \"No tests specified\" && exit 0"

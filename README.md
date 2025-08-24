@@ -63,7 +63,7 @@ eip-7702_QN/
 ## 🛠️ 安装和配置
 
 ### 1. 克隆仓库并进入项目目录
-执行以下命令前确保你已安装 `git`  ➡️[安装git教程](./安装git教程.md)
+执行以下命令前确保你已安装 `git`            ➡️[安装git教程](./安装git教程.md)
 ```
 git clone https://github.com/oxmoei/eip-7702_QN.git
 cd eip-7702_QN
@@ -114,7 +114,7 @@ DELEGATION_CONTRACT_ADDRESS="0x0000000000000000000000000000000000000000"
 
 ## 🎯 使用流程
 
-### 1. 部署合约
+### 1️⃣ 部署合约
 
 ```bash
 # 使用 Foundry 部署新的合约
@@ -123,9 +123,9 @@ DELEGATION_CONTRACT_ADDRESS="0x0000000000000000000000000000000000000000"
 # 或者，授权委托给已部署的合约（确保已将合约地址添加到了 .env）
 node src/delegate.js
 ```
-如需开源合约（验证合约），请参考➡️[开源合约教程](./CONTRACT_VERIFICATION_GUIDE.md)
+如需开源合约（验证合约），请参考           ➡️[开源合约教程](./CONTRACT_VERIFICATION_GUIDE.md)
 
-### 2. 生成交易配置
+### 2️⃣ 生成交易配置
 
 ```bash
 # 交互式生成交易配置
@@ -134,18 +134,14 @@ node src/generate-config.js
 npm run config
 ```
 
-### 3. 执行标准批量交易
+### 3️⃣ 执行批量交易
 
 ```bash
 # 执行用户自己支付 gas 费用的批量交易
 node src/main.js
 # 或
 npm run main
-```
 
-### 4. 执行赞助批量交易
-
-```bash
 # 执行第三方支付 gas 费用的批量交易
 node src/sponsored.js
 # 或
@@ -159,6 +155,7 @@ npm run sponsored
 | 脚本 | 功能 | 使用场景 |
 |------|------|----------|
 | `deploy.sh` | 合约部署 | 首次部署或重新部署合约 |
+| `src/delegate.js` | 授权委托 | 委托给已部署的合约 |
 | `src/generate-config.js` | 配置生成 | 创建新的交易配置 |
 | `src/main.js` | 标准交易 | 用户自己支付 gas 的交易 |
 | `src/sponsored.js` | 赞助交易 | 第三方支付 gas 的交易 |

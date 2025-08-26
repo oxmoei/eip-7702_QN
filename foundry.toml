@@ -11,7 +11,4 @@ remappings = [
 ]
 
 [rpc_endpoints]
-sepolia = "https://sepolia.infura.io/v3/33115389a88b4072bd35df8d6cf7890e"
-
-[etherscan]
-sepolia = { key = "" }
+default = "${RPC_URL}"
